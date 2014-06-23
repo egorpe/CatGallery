@@ -47,19 +47,45 @@ var items = [
 
 ]
 
-$(function() {
+function filter(searchTerm) {
+    var data = [];
+    $.each(items, function(idx, elem) {
+        if (elem.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) {
+            data.push(elem);
+        }
+    });
+    return data;
+}
+
+function fillData() {
+    var data = filter($("#search").val());
     var table = $("#theTable tbody");
-    $.each(items, function(idx, elem){
-        table.append("<tr><td><img src='images/"+elem.path+"' width='30'></td><td>"+elem.title+"</td><td>"+elem.type+"</td></tr>");
+    table.empty();
+    $.each(data, function(idx, elem){
+        table.append("<tr><td class='pictureCell'><img src='images/"+elem.path+"' width='30'></td><td>"+elem.title+"</td><td>"+elem.type+"</td></tr>");
     });
-    var thumbnails = $('<ul></ul>').attr('id', 'theThumbnails').insertAfter('#theTable').hide();
-    $.each(items, function(idx, elem){
-        thumbnails.append("<li class='thumbnail'><img src='images/"+elem.path+"' width='210'>"+elem.title+"</li>");
+    var thumbnails = $("#theThumbnails");
+    thumbnails.empty();
+    $.each(data, function(idx, elem){
+        thumbnails.append("<li class='thumbnailBox'><div class='thumbnail'><img src='images/"+elem.path+"'></div><div class='thumbnailTitle'>"+elem.title+"</div></li>");
     });
-    $('#changeView').click();
+}
+
+$("#searchBtn").click(function() { fillData(); });
+
+$("#search").keyup(function (e) {
+    if (e.keyCode == 13) {
+        fillData();
+    }
 });
 
-$('#changeView').click(function() {
+$(function() {
+    $("#theThumbnails").hide();
+    $("#changeView").click();
+});
+
+$("#changeView").click(function() {
+    fillData();
     $('#theTable, #theThumbnails').toggle();
     $(this).toggleClass('gridView listView');
 });

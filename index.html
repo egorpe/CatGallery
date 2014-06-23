@@ -9,8 +9,8 @@
         <h1>Gallery</h1>
 
         <div class="searchBox">
-            <input type="text" class="search" placeholder="Enter search criteria here...">
-            <button href="#" class="searchBtn">Search</button>
+            <input type="text" id="search" placeholder="Enter search criteria here...">
+            <button href="#" id="searchBtn">Search</button>
             <button href="#" class="viewBtn listView" id="changeView"></button>
         </div>
 
@@ -20,11 +20,13 @@
                 <th>&nbsp;</th>
                 <th>Title</th>
                 <th>Type</th>
-            <tr>
+            </tr>
             </thead>
             <tbody>
             </tbody>
         </table>​
+
+        <ul id="theThumbnails"></ul>
 
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/main.js"></script>

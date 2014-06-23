@@ -1,43 +1,45 @@
+html {
+    font-family: Helvetica, Verdana, "Open Sans";
+}
+
 .hidden {
     display: none !important;
     visibility: hidden;
 }
 
 h1 {
-    width: 1024px;
+    width: 960px;
     margin: 0 auto;
     padding-bottom: 10px;
 }
 
 #theTable {
-    width: 1024px;
+    width: 960px;
     margin: 0 auto;
-    padding-top: 10px;
 }
 
 #theThumbnails {
-    width: 1024px;
+    width: 960px;
     margin: 0 auto;
-    padding-top: 10px;
     list-style-type: none;
 }
 
 .searchBox {
-    width: 1024px;
-    margin: 0 auto;
+    width: 960px;
+    margin: 0 auto 10px;
     background: #efefef;
     padding: 0.1em 0.1em 0.5em 0.5em;
 }
 
-.search {
+#search {
     border: 1px solid #a0a0a0;
     padding: 10px 30px 10px 40px;
     margin: 3px;
     background: url('../icons/search-icon.png') #ffffff no-repeat 8px 6px;
-    width: 800px;
+    width: 735px;
 }
 
-.searchBtn {
+#searchBtn {
     position: relative;
     left: -10px;
     border: 1px solid #7070ff;
@@ -68,11 +70,12 @@ h1 {
 
 table {
     border-spacing: 0;
-    border-collapse: separate;
+    border-collapse: collapse;
 }
 
 #theTable tr {
     height: 44px;
+    border-bottom: 3px solid #efefef;
 }
 
 #theTable th {
@@ -83,8 +86,39 @@ table {
     background: #efefef;
 }
 
+.thumbnailBox {
+    width: 230px;
+    height: 230px;
+    float: left;
+    text-align: center;
+    background: #efefef;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.thumbnailTitle {
+    padding-top: 30px;
+}
+
 .thumbnail {
-   width: 230px;
-   height: 230px;
-   float: left;
+    height: 135px;
+    line-height: 135px;
+    width: 210px;
+    background: #ffffff;
+    margin: 10px 10px 0 10px;
+}
+
+.thumbnail img {
+    max-width:100%;
+    max-height:100%;
+    vertical-align: middle;
+}
+
+.pictureCell {
+    text-align: center;
+    width: 100px;
+}
+
+td img {
+    vertical-align: middle;
 }
