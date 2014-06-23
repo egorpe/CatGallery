@@ -1,0 +1,90 @@
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+h1 {
+    width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+#theTable {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#theThumbnails {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 10px;
+    list-style-type: none;
+}
+
+.searchBox {
+    width: 1024px;
+    margin: 0 auto;
+    background: #efefef;
+    padding: 0.1em 0.1em 0.5em 0.5em;
+}
+
+.search {
+    border: 1px solid #a0a0a0;
+    padding: 10px 30px 10px 40px;
+    margin: 3px;
+    background: url('../icons/search-icon.png') #ffffff no-repeat 8px 6px;
+    width: 800px;
+}
+
+.searchBtn {
+    position: relative;
+    left: -10px;
+    border: 1px solid #7070ff;
+    background: #7070ff;
+    height: 37px;
+    width: 100px;
+    color:#ffffff;
+    cursor: pointer;
+}
+
+.viewBtn {
+    position: relative;
+    left: -10px;
+    top: 12px;
+    border: 1px solid #7070ff;
+    height: 37px;
+    width: 37px;
+    cursor: pointer;
+}
+
+.gridView {
+    background: url('../icons/grid-toggle.png') #7070ff no-repeat 4px 7px;
+}
+
+.listView {
+    background: url('../icons/list-toggle.png') #7070ff no-repeat 4px 7px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: separate;
+}
+
+#theTable tr {
+    height: 44px;
+}
+
+#theTable th {
+    text-align: left;
+}
+
+#theTable thead {
+    background: #efefef;
+}
+
+.thumbnail {
+   width: 230px;
+   height: 230px;
+   float: left;
+}
